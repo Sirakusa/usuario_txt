@@ -3,21 +3,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-main()
-{
-
-    char *str,ch;
-    int size=0;
+main(){
+    char *name,ch;
+    int size=0,i;
     
-    str = (char *)malloc(0);
+    name = (char *)calloc(0,1);
 
     while ((ch = getchar()) != '\n' && ch != EOF){
-        str[size]= ch;
+        name[size]= ch;
         size++;
-        str = (char *)realloc(str, size);
+        name = (char *)realloc(name, size);
     }
-    printf("%s %d",str,size-1);
-    free(str);
+    name[size+1] = NULL;
+    
+    free(name);
 
     return (0);
 }
