@@ -1,21 +1,23 @@
 #include <stdio.h>
-#include<conio.h>
-#include<stdlib.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <string.h>
 
 main()
 {
-    char name[50];
-    
 
-    FILE *arch=fopen("datos1.txt","wt");
-    if (arch==NULL){
-        exit(1);
+    char *str,ch;
+    int size=0;
+    
+    str = (char *)malloc(0);
+
+    while ((ch = getchar()) != '\n' && ch != EOF){
+        str[size]= ch;
+        size++;
+        str = (char *)realloc(str, size);
     }
-    fputs("Primer linea\n",arch);
-    fputs("Segunda linea\n",arch);
-    fputs("Tercer linea\n",arch);
-    fclose(arch);
-    printf("Se creo el archivo de texto con tres lineas de texto.");
-    getch();
-    return 0;
+    printf("%s %d",str,size-1);
+    free(str);
+
+    return (0);
 }
