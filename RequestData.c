@@ -7,9 +7,17 @@
 main(){
     char *nombre;
 
-    nombre = NombrePersona();
+    FILE *f;
+    f = fopen("usuarios.txt","w");
 
-    printf("%s",nombre);
+    if(f == NULL){
+        printf("No se pudo crear el archivo\n");
+        exit(1);
+    }
+
+    nombre = NombrePersona();
+    fprintf("%s\n",nombre);
+    fclose(f);
 
     return (0);
 }
