@@ -5,7 +5,7 @@
 #include "lib.h"
 
 main(){
-    char *nombre, i = 0;
+    char *nombre;
 
     FILE *f;
     f = fopen("usuarios.txt", "a+");

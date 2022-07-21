@@ -19,20 +19,32 @@ char *NombrePersona (void){
     free(name);
 } 
 
-char *PassWord (void){
+void PassWord (void){
     char *clave,ch;
     int size=0;
     clave = (char *)calloc(0,1);
 
-    printf("Ingrase una contrasena de 5 a 10 caracteres: ");
-    
-    while ((ch = getch()) != '\n' && ch != EOF){
-        clave[size]= ch;
-        printf("*");
-        size++;
+    printf("Ingrse su contrasela con caracteres de la A a la Z\n");
+    printf("De 5 a 7 caracteres: ");
+
+    while (ch = getch()){
+        if(ch == 13){
+            break;
+        }
+        if (ch >= 65 && ch <= 90){
+            clave[size]= ch;
+            printf("*");
+            size++;
+        }
+        if (ch >= 97 && ch <= 122){
+            clave[size]= ch;
+            printf("*");
+            size++;
+        }
+        if (size == 7){
+            break;
+        }
         clave = (char *)realloc(clave, size);
     }
-    return clave;
     free(clave);
-    return clave;
 }
