@@ -5,18 +5,18 @@
 #include "lib.h"
 
 main(){
-    char *nombre;
+    char *nombre, i = 0;
 
     FILE *f;
-    f = fopen("usuarios.txt","w");
+    f = fopen("usuarios.txt", "a+");
 
-    if(f == NULL){
+    if (f == NULL){
         printf("No se pudo crear el archivo\n");
         exit(1);
     }
 
     nombre = NombrePersona();
-    fprintf("%s\n",nombre);
+    fprintf(f, "%s\n", nombre);
     fclose(f);
 
     return (0);
