@@ -3,13 +3,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-void *PassWord (void);
+char *PassWord (void);
 char *NombrePersona (void);
+char *CifradoCesar(char*claveuser);
+char *claveuser;
 char *name;
 char *clave;
+char *cifrado;
 
 main(){
     char *nombre;
+    char *contrasena;
+    char*CodCesar;
 
     FILE *f;
     f = fopen("usuarios.txt", "a+");
@@ -20,12 +25,18 @@ main(){
     }
 
     nombre = NombrePersona();
-    PassWord();
-    fprintf(f, "%s\n", nombre);
+    contrasena = PassWord();
+    CodCesar = CifradoCesar(contrasena);
+    fprintf(f, "Nombre: %s  Contrasena: %s Cifrado Cesar: \n", nombre,contrasena);
     fclose(f);
+
+    free(CodCesar);
+    free(claveuser);
+    free(contrasena);
     free(nombre);
     free(name);
     free(clave);
+    free(cifrado);
     return (0);
 }
 
@@ -44,7 +55,7 @@ char *NombrePersona (void){
     return name;
 } 
 
-void *PassWord (void){
+char *PassWord (void){
     char *clave,ch;
     int size=0;
     clave = (char *)calloc(0,1);
@@ -56,8 +67,15 @@ void *PassWord (void){
         if(ch == 13){
             break;
         }
-        if ((ch >= 65 && ch <= 90)||(ch >= 97 && ch <= 122)){
+        if (ch >= 65 && ch <= 90){
             clave[size]= ch;
+            printf("*");
+            size++;
+            clave = (char *)realloc(clave, size);
+        }
+        if (ch >= 97 && ch <= 122){
+            clave[size]= ch;
+            clave[size] -= 32;
             printf("*");
             size++;
             clave = (char *)realloc(clave, size);
@@ -67,4 +85,15 @@ void *PassWord (void){
         }
     }
     return clave;
+}
+
+char *CifradoCesar(char*claveuser){
+    char alfabeto[25];
+    char abc;
+    int i=0,size;
+    size = strlen(claveuser);
+    for (abc = 'a'; abc  <= 'z'; abc++,i++){
+        alfabeto[i] = abc;
+    }
+    
 }
