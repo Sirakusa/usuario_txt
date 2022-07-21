@@ -16,6 +16,7 @@ main(){
     }
 
     nombre = NombrePersona();
+    PassWord();
     fprintf(f, "%s\n", nombre);
     fclose(f);
     free(nombre);
