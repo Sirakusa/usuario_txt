@@ -18,6 +18,6 @@ main(){
     nombre = NombrePersona();
     fprintf(f, "%s\n", nombre);
     fclose(f);
-
+    free(nombre);
     return (0);
 }
