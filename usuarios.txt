@@ -38,7 +38,7 @@ Nombre: kose      Contrasena: ASAS     Cifrado Cesar: ASAS
 Nombre: ddaad      Contrasena: DDDDAS     Cifrado Cesar: DDDDAS
 Nombre: asas      Contrasena: ASDF     Cifrado Cesar: ASDF
 Nombre: jooooo      Contrasena: SSSAA     Cifrado Cesar: 
-Nombre: jose luis      Contrasena: SSDANombre: jose luis      Contrasena: SDSANombre: ffgfg      Contrasena: ASSANombre: asjsadg      Contrasena: ASASNombre: jose luis      Contrasena: SDSD     Cifrado Cesar: ÿHWD
+Nombre: jose luis      Contrasena: SSDANombre: jose luis      Contrasena: SDSANombre: ffgfg      Contrasena: ASSANombre: asjsadg      Contrasena: ASASNombre: jose luis      Contrasena: SDSD     Cifrado Cesar: ï¿½HWD
 Nombre: jose luis      Contrasena: ASDAS     Cifrado Cesar: 
 Nombre: asasa      Contrasena: AAAS     Cifrado Cesar: 
 Nombre: fffffffff      Contrasena: ASAAAA     Cifrado Cesar: 
@@ -57,3 +57,10 @@ Nombre: Angel Verdugo      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
 Nombre: Jorge      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
 Nombre: joseeee      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
 Nombre: kkkk      Contrasena: KKK     Cifrado Cesar: OPK
+Nombre: aluhakbar      Contrasena: RARAMURNombre: alu      Contrasena: RARAMUR     Cifrado Cesar: VEVEQYV
+Nombre: Joseee      Contrasena: RARAMUR     Cifrado Cesar: VEVEQYV
+Nombre: kkkk      Contrasena: KAKA     Cifrado Cesar: OEOE
+Nombre: ujuj      Contrasena: UJUJ     Cifrado Cesar: YNYN
+Nombre: Jose Luis Herrer      Contrasena: SIRAJUS     Cifrado Cesar: WMVENYW
+Nombre: Jose Lis Herrea      Contrasena: SIRAJU     Cifrado Cesar: WMVENY
+Nombre: jose      Contrasena: KALUA     Cifrado Cesar: OEPYE

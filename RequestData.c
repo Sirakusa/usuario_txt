@@ -5,15 +5,14 @@
 
 char *PassWord(void);
 char *NombrePersona(void);
-char *name;
+char *CifCesar(char * contra);
+
 char *clave;
-char *cifrado;
 char *contrasena;
 
 main()
 {
     char *nombre;
-    char *CodCesar;
 
     FILE *f;
     f = fopen("usuarios.txt", "a+");
@@ -27,35 +26,14 @@ main()
     nombre = NombrePersona();
     contrasena = PassWord();
     fprintf(f, "Nombre: %s      Contrasena: %s", nombre, contrasena);
-
-    char abc[25],ch;
-    int i = 0, x = 0, size,result;
-    int shift = 4;
-    size = strlen(contrasena);
-    for (ch = 'A'; ch <= 'Z'; ch++,i++)
-    {
-        abc[i] = ch;
-    }
-    i = 0;
-    while (x != size-1)
-    {
-        result = 0;
-        result= strcmp(&abc[i], &contrasena[x]);
-        if (result == 1){
-            contrasena[x] = abc[i + shift];
-            x++;
-        }
-        i++;
-    }
+    contrasena = CifCesar(contrasena);
     fprintf(f, "     Cifrado Cesar: %s\n", contrasena);
+
     fclose(f);
 
-    free(CodCesar);
     free(contrasena);
     free(nombre);
-    free(name);
     free(clave);
-    free(cifrado);
     return (0);
 }
 
@@ -108,4 +86,34 @@ char *PassWord(void)
         }
     }
     return clave;
+}
+
+char *CifCesar(char * contra){
+    char abc[25], ch;
+    int i = 0, x = 0, size;
+    int shift = 4;
+
+    size = strlen(contra);
+    for (ch = 'A'; ch <= 'Z'; ch++, i++){
+        abc[i] = ch;
+    }
+
+    i = 0;
+    while (x != size){
+        if (contra[x] == abc[i] && (i < 21)){
+            contra[x] = abc[i + shift];
+            x++;
+            i = 0;
+        }
+        if (contra[x] == abc[i] && (i > 21)){
+            contra[x] = abc[(i + shift)-26];
+            x++;
+            i =0;
+        }
+        i++;
+        if (i == 26){
+            i = 0;
+        }
+    }
+    return contra;
 }
