@@ -52,3 +52,8 @@ Nombre: fffffff      Contrasena: DDDD     Cifrado Cesar:
 Nombre: jjjasa      Contrasena: ASAS     Cifrado Cesar: AAAA
 Nombre: jdddddd      Contrasena: ASADA     Cifrado Cesar: 
 Nombre: jose luisss      Contrasena: SSDSNombre: dddddddfdfd      Contrasena: ASDSD     Cifrado Cesar: FWXYD
+Nombre: Jose Mumu      Contrasena: MUARCI     Cifrado Cesar: RYZ
+Nombre: Angel Verdugo      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
+Nombre: Jorge      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
+Nombre: joseeee      Contrasena: RARAMUR     Cifrado Cesar: VWXYZ
+Nombre: kkkk      Contrasena: KKK     Cifrado Cesar: OPK
